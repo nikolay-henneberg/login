@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
@@ -10,15 +9,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-          prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: black;"
-          xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+          prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.161"
+          xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
-        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" prefWidth="400.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
     </columnConstraints>
     <rowConstraints>
         <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES"/>
@@ -33,15 +31,15 @@
         <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES"/>
     </rowConstraints>
     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-        <Image url="../image/logo.png"/>
+        <Image url="image/logo.png"/>
     </ImageView>
-    <Label text="Sign in to deker.org" textFill="#c6baa8" GridPane.rowIndex="2">
+    <Label text="Create new account" textFill="#c6baa8" GridPane.rowIndex="2">
         <font>
           <Font size="18.0"/>
         </font>
     </Label>
     <JFXTextField focusColor="#dfd7cb" maxWidth="250.0" prefWidth="250.0" promptText="Email:" unFocusColor="#c6baa8"
-                  GridPane.rowIndex="3">
+                  GridPane.rowIndex="4">
         <GridPane.margin>
           <Insets left="50.0" right="50.0"/>
         </GridPane.margin>
@@ -49,8 +47,8 @@
           <Font size="16.0"/>
         </font>
     </JFXTextField>
-    <JFXPasswordField focusColor="#dfd7cb" maxWidth="250.0" prefWidth="250.0" promptText="Password:"
-                      unFocusColor="#c6baa8" GridPane.rowIndex="4">
+    <JFXPasswordField labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Create password:"
+                      unFocusColor="#c6baa8" GridPane.rowIndex="5">
         <GridPane.margin>
           <Insets left="50.0" right="50.0"/>
         </GridPane.margin>
@@ -58,33 +56,28 @@
           <Font size="16.0"/>
         </font>
     </JFXPasswordField>
-    <JFXCheckBox checkedColor="#534841" text="Remember me" textFill="#c6baa8" GridPane.rowIndex="5">
-        <GridPane.margin>
-          <Insets/>
-        </GridPane.margin>
-        <font>
-          <Font size="16.0"/>
-        </font>
-    </JFXCheckBox>
-    <JFXButton maxWidth="250.0" prefWidth="250.0" style="-fx-background-color: b9a68b;" text="Sign in"
-               GridPane.rowIndex="6">
-        <font>
-          <Font size="16.0"/>
-        </font>
-    </JFXButton>
-    <JFXButton maxWidth="250.0" prefWidth="250.0" style="-fx-background-color: #534841;" text="Create new account"
+    <JFXButton maxWidth="250.0" prefWidth="250.0" style="-fx-background-color: #534841;" text="Create"
                textFill="#c6baa8" GridPane.rowIndex="7">
         <font>
           <Font size="16.0"/>
         </font>
     </JFXButton>
-    <Label text="Forgot Password ?" textFill="#c6baa8" underline="true" GridPane.rowIndex="8">
-        <GridPane.margin>
-          <Insets/>
-        </GridPane.margin>
+    <JFXPasswordField labelFloat="true" layoutX="85.0" layoutY="270.0" maxWidth="250.0" prefWidth="250.0"
+                      promptText="Confirm password:" unFocusColor="#c6baa8" GridPane.rowIndex="6">
+        <font>
+          <Font size="16.0"/>
+        </font>
+    </JFXPasswordField>
+    <JFXTextField focusColor="#dfd7cb" layoutX="85.0" layoutY="285.0" maxWidth="250.0" prefWidth="250.0"
+                  promptText="Nickname:" unFocusColor="#c6baa8" GridPane.rowIndex="3">
+        <font>
+          <Font size="16.0"/>
+        </font>
+    </JFXTextField>
+    <Label layoutX="132.0" layoutY="171.0" text="Back to Sign in" textFill="#c6baa8" underline="true"
+           GridPane.rowIndex="8">
         <font>
           <Font size="16.0"/>
         </font>
     </Label>
-    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0"/>
 </GridPane>

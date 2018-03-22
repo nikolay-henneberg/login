@@ -11,16 +11,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class View extends Application {
+public class StatusView extends Application {
+    private boolean status;
     private String title;
     private GridPane gridPane;
     private Parent parent;
     private double xOffset = 0;
     private double yOffset = 0;
 
-    public View() {
+    public StatusView() {
         this.title = "Sign in to deker.org";
-
     }
 
     public void show() {
@@ -42,11 +42,11 @@ public class View extends Application {
 
         primaryStage.getIcons().add(new Image("image/logo.png"));
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml/login.fxml")));
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getClassLoader().getResource("status.fxml"))));
 
         Scene scene = new Scene(root);
 
-        scene.getStylesheets().add("css/style.css");
+        scene.getStylesheets().add("style.css");
 
         primaryStage.setScene(scene);
 
