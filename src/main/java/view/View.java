@@ -1,15 +1,12 @@
 package view;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -43,14 +40,15 @@ public class View extends Application {
         primaryStage.setMaxWidth(400);
         primaryStage.setMaxHeight(530);
 
-        primaryStage.getIcons().add(new Image("logo.png"));
+        primaryStage.getIcons().add(new Image("image/logo.png"));
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("login.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml/login.fxml")));
 
+        Scene scene = new Scene(root);
 
+        scene.getStylesheets().add("css/style.css");
 
-
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(scene);
 
 
 
